@@ -85,10 +85,9 @@ public class FullbrightMod {
                     ? "§a[Fullbright] Activado"
                     : "§c[Fullbright] Desactivado";
 
-            mc.player.displayClientMessage(
-                    Component.literal(msg),
-                    false
-            );
+            mc.player.sendSystemMessage(
+        Component.literal(msg)
+);
         }
     }
 }
