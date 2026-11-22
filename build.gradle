@@ -1,5 +1,6 @@
 
 plugins {
+    id 'java'
     id 'eclipse'
     id 'idea'
     id 'net.minecraftforge.gradle' version '[7.0.17,8)'
@@ -8,7 +9,11 @@ plugins {
 group = 'com.yericosan.fullbright'
 version = '1.0.0'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
 
 minecraft {
     mappings channel: 'official', version: "${minecraft_version}"
