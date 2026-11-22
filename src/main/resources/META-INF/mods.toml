@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT"
+
+[[mods]]
+modId="fullbright"
+version="1.0.0"
+displayName="fullbright yerico_san"
+authors="yerico_san"
+description='''
+Mod ligero de Fullbright creado por yerico_san, activable desde la configuración del mod o con una tecla.
+'''
+
+[[dependencies.fullbright]]
+    modId="forge"
+    mandatory=true
+    versionRange="[52,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.fullbright]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[26.3,)"
+    ordering="NONE"
+    side="CLIENT"

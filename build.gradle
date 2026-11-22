@@ -1,0 +1,31 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+}
+
+group = 'com.yericosan.fullbright'
+version = '1.0.0'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+minecraft {
+    mappings channel: 'official', version: "${minecraft_version}"
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${forge_version}"
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title"     : "fullbright",
+            "Specification-Vendor"    : "yerico_san",
+            "Specification-Version"   : "1",
+            "Implementation-Title"    : project.name,
+            "Implementation-Version"  : project.jar.archiveVersion,
+            "Implementation-Vendor"   : "yerico_san"
+        ])
+    }
+}
