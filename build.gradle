@@ -1,3 +1,4 @@
+
 plugins {
     id 'eclipse'
     id 'idea'
@@ -14,7 +15,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    minecraft "net.minecraftforge:forge:${forge_version}"
 }
 
 jar {
