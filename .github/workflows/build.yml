@@ -25,10 +25,9 @@ jobs:
 
       - name: Compilar Mod (.jar)
         run: gradle build
-        working-directory: ./fullbright-yerico_san
 
       - name: Subir archivo .jar compilado
-        uses: upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: fullbright-yerico_san-26.3
-          path: fullbright-yerico_san/build/libs/*.jar
+          path: build/libs/*.jar
