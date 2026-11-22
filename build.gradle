@@ -9,18 +9,23 @@ plugins {
 group = 'com.yericosan.fullbright'
 version = '1.0.0'
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
-    }
-}
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 minecraft {
     mappings channel: 'official', version: "${minecraft_version}"
 }
 
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+}
+
 dependencies {
-    minecraft "net.minecraftforge:forge:${forge_version}"
+    implementation minecraft.dependency(
+        "net.minecraftforge:forge:${forge_version}"
+    )
 }
 
 jar {
@@ -35,3 +40,4 @@ jar {
         ])
     }
 }
+
